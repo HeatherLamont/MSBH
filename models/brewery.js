@@ -8,7 +8,11 @@ const brewerySchema = new mongoose.Schema({
     brewery_city:{
         type: String,
         required: true
-    }
+    },
+    brewery_logo:{
+        type: String,
+        required: true
+    },
 })
 
 module.exports = mongoose.model('Brewery', brewerySchema)

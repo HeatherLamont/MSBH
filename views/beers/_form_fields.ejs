@@ -1,0 +1,32 @@
+<div>
+    <label>Beer Name</label>
+    <input type="text" name="beer_name" value="<%= beer.beer_name %>">
+</div>
+<div>
+    <label>Brewery</label>
+    <select name="brewery">
+    <% breweries.forEach(brewery =>{ %>
+        <% if (brewery.id === beer.brewery){ %>
+    <option selected label="<%= brewery.brewery_name %>" value="<%= brewery.id %>">
+    <% } else { %>
+        <option label="<%= brewery.brewery_name %>" value="<%= brewery.id %>">
+    <% } %>
+    <% }) %>
+    </select>
+</div>
+<div>
+    <label>ABV %</label>
+    <input type="number" name="ABV" step=".1" value="<%= beer.ABV %>">
+</div>
+<div>
+    <label>Price £</label>
+    <input type="number" name="price" step=".01" value="<%= beer.price %>">
+</div>
+<div>
+    <label>Logo</label>
+    <input type="file" name="logo">
+</div>
+<div>
+    <label>Description</label>
+    <textarea name="description"><%= beer.description %> </textarea>
+</div>

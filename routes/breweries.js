@@ -38,7 +38,7 @@ router.post('/', async (req, res)=>{
             res.redirect('breweries')
     }catch{
         res.render('breweries/new', 
-            {brewery: brewery, errorMessage: 'Error Creating Author'})
+            {brewery: brewery, errorMessage: 'Error Creating Brewery'})
     }
 })
 
