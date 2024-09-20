@@ -1,8 +1,6 @@
 
-
 if(process.env.NODE_ENV !== 'production'){
-    require('dotenv').config()
-    
+    require('dotenv').config() 
 }
 
 
@@ -23,7 +21,6 @@ console.log('Hello ' + process.env.DATABASE_URL)
 
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true
 })
 const db = mongoose.connection
 db.on('error', error => console.error(error))
