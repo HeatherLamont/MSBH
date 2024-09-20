@@ -1,0 +1,11 @@
+<h2>Search Breweries</h2>
+<form action="/breweries" method="GET">
+<label>Brewery Name</label>
+<input type="text" name="brewery_name" value="<%= searchOptions.brewery_name %>">
+<button type="submit">Search</button>
+</form>
+<br>
+<% breweries.forEach(brewery => { %>
+    <div><%= brewery.brewery_name %> <%= brewery.brewery_city %></div>
+    
+<% }) %>
